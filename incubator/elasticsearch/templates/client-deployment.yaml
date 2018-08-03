@@ -101,6 +101,7 @@ spec:
             path: /_cluster/health
             port: 9200
           initialDelaySeconds: 90
+          periodSeconds: 30
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
         ports:
